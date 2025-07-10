@@ -1,0 +1,256 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base font size for scalable rem units */
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: url(../img/bg1.jpg) no-repeat center center / cover;
+  padding: 2rem 5%;
+  color: #d01414;
+  font-size: 1rem; /* Keep font scalable */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  background: rgba(8, 15, 9, 0.1);
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Header */
+header,
+.navbar-nav,
+.home,
+.download-social,
+.social-icons {
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.navbar-nav a {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 10px #fff;
+}
+
+.navbar-nav a.active {
+  background: #b3b5c1;
+  box-shadow: 0 0 10px #fff;
+  color: #333;
+}
+
+/* About Section */
+/* About Section Modern Style */
+.about {
+  background: rgba(188, 28, 28, 0.08);
+  padding: 10px 3px; /* Reduced top padding */
+  margin-top: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  color: #31ba1c;
+}
+
+/* Heading */
+.about h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-bottom: 1px;
+  padding-top: 2px;
+  color: #4badf4;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+/* Subheadings */
+.about h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  margin-bottom: 1px;
+  color: #4badf4;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+/* Paragraphs */
+.about p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+/* Skills List Modern Look */
+.about ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.about ul li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.about ul li:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.about ul li::before {
+  content: '🚀';
+  margin-right: 10px;
+  font-size: 18px;
+  color: #4badf4;
+}
+
+.about-skills {
+  margin-top: 0px;
+  padding: 20px 0;
+  color: #fff;
+}
+
+.about-skills h3 {
+  font-size: 24px;
+  color: #4badf4;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.about-skills ul {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.about-skills ul li {
+  display: flex;
+  align-items: center;
+  background: #16172b; /* or #222 for lighter variant */
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(191, 112, 112, 0.15);
+}
+
+.about-skills ul li:hover {
+  background: #333;
+  transform: translateY(-5px);
+}
+
+.about-skills ul li {
+  flex-direction: column; /* stack elements vertically */
+  align-items: flex-start;
+}
+
+.skill-title {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+}
+
+.skill-title i {
+  color: #4badf4;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  background: #2a2a2a;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 14px;
+  margin-top: 10px;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #4badf4, #3a8edb);
+  border-radius: 6px;
+  transition: width 0.5s ease-in-out;
+  position: relative;
+}
+
+.progress-percent {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    justify-content: center;
+  }
+
+  .contact-form,
+  .reference-card {
+    width: 100%;
+  }
+
+  section h1 {
+    font-size: 1.5rem;
+  }
+}

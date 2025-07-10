@@ -1,0 +1,210 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base font size for scalable rem units */
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: url(../img/bg1.jpg) no-repeat center center / cover;
+  padding: 2rem 5%;
+  color: #fff;
+  font-size: 1rem; /* Keep font scalable */
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 2rem;
+  overflow: hidden;
+}
+
+/* Header */
+header,
+.navbar-nav,
+.home,
+.download-social,
+.social-icons {
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.navbar-nav a {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav a:hover {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 10px #fff;
+}
+
+.navbar-nav a.active {
+  background: #9fa6d3;
+  box-shadow: 0 0 10px #fff;
+  color: #333;
+}
+
+/* Section Headers */
+section h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #3d9f89;
+}
+
+/* Reference Cards */
+.references {
+  padding: 10px 3px; /* Reduced top padding */
+  margin-top: 20px;
+  margin-bottom: 2rem;
+}
+
+.reference-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 1rem auto;
+  text-align: left;
+}
+
+.reference-card p {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #ddd;
+}
+
+.reference-card i {
+  color: #4badf4;
+  margin-right: 0.5rem;
+}
+
+/* Contact Info */
+.contact-details .contact-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #ddd;
+}
+
+.contact-info i {
+  margin-right: 8px;
+  color: #4badf4;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #fff;
+  color: #333;
+  box-shadow: 0 0 10px #fff;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #1a1a1a;
+  color: #fff;
+  resize: none;
+}
+
+.contact-form button {
+  padding: 12px;
+  font-size: 1rem;
+  background: #4badf4;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #318fe0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-nav {
+    justify-content: center;
+  }
+
+  .contact-form,
+  .reference-card {
+    width: 100%;
+  }
+
+  section h1 {
+    font-size: 1.5rem;
+  }
+}
